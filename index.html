@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="todomvs">
+
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="todoController as vm">
+    <div>
+        <div class="title">
+            <h1>TODOS</h1>
+        </div>
+        <div>
+            <form ng-submit="vm.addTask()">
+                <input type="text" placeholder="Enter Name Task" ng-model='vm.text' autofocus>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Complite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vm.todos track by $index" >
+                    <td>{{item.nameTask}}</td>
+                    <td>{{item.completed}}</td>
+                    <td><input type="checkbox" ng-model="item.completed"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>

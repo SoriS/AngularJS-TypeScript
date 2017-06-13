@@ -1,0 +1,14 @@
+{
+    "name": "todo-angularjs-typescript",
+    "version": "0.0.1",
+    "main": "webpack.config.js",
+    "dependencies": {
+        "angular": "^1.6.0",
+        "@types/angular": "1.6.4",
+        "typescript": "^2.3.4"
+    },
+    
+    "devDependencies": {
+        "lite-server": "^2.3.0"
+    }
+}
